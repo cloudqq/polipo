@@ -17,7 +17,3 @@ RUN apk add -U build-base openssl \
     && mkdir -p /usr/share/polipo/www /var/cache/polipo \
     && apk del build-base openssl \
     && rm -rf /var/cache/apk/*
-
-EXPOSE 8123
-
-ENTRYPOINT ["polipo", "proxyAddress=0.0.0.0", "proxyPort=8123"]
